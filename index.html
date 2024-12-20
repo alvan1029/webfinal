@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+    <!-----Nav----->
+     <a href="#" class="logo"><span>N</span>amoc</a>
+     <ul class="navbar">
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#home-text">About</a></li>
+        <li><a href="#ach">Achievement</a></li>
+        <li><a href="#share">Contacs</a></li>
+     </ul>
+     <div class="menu_btn">
+        <span>Intro</span>
+        <div class="bx bx-menu" id="menu-icon"></div>
+     </div>
+     <script src="https://unpkg.com/scrollreveal"></script>
+    <!-----js----->
+    <script src="js.js"></script>
+    </header>
+    <!-----home----->
+    <section class="home">
+        <div class="home-text">
+            <span>SK CHAIPERSON</span>
+            <h1>Alvan Namoc</h1>
+            <p>My Name is Alvan B. Namoc 5’11 from Poblacion Sur Batuan Bohol.
+                A 3rd Year student @ BISU Balilihan Campus. I’m a SK CHAIPERSON in my barangay and a member of World Changers Organization( a club in BISU Balilihan)</p>
+
+
+            <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('food')">Fav Food</p>
+                <p class="tab-links" onclick="opentab('song')">Fav songw/artist</p>
+                <p class="tab-links" onclick="opentab('hobbies')">Hobbies</p>
+            </div>
+            <!----------  food --------->
+            <div class="tab-contents active-tab" id="food">
+                <ul>
+                    <li>Letchon</li>                       
+                    <li>Menudo</li>
+                    <li>Fried Chicker</li>
+                </ul>
+            </div>
+            <!----------  artist --------->
+            <div class="tab-contents" id="song">
+                <ul>
+                    <li>Need It by Migos ft Young Boy NBA</li>
+                    <li>Peaches and Eggplants - Young Nudy ft. 21 Savage</li>
+                    <li>Kaya ngayong Pasko - Bornok</li>
+                    
+                </ul>
+            </div>
+            <!---------- hobbies --------->
+            <div class="tab-contents" id="hobbies">
+                <ul>
+                    <li>Jugging</li>
+                    <li>Exercise</li>
+                    <li>Singing</li>
+                </ul>
+            </div>
+        </div>
+
+
+
+        <div class="home-img">
+            <img src="Image/profile.jpg">
+        </div>
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+    
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link"); 
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab"); 
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+        </script>
+     </section>
+     
+    
+
+    <!---------- Ach --------->
+
+    <section class="achievement">
+
+        <div id="ach">
+            <div class="fcontainer">
+                <h1 class="sub-title">Achievement</h1>
+                <div class="fav-list">
+                    <div class="fav">
+                        <img src="Image/poster1.jpg">
+                        <div class="layer">
+                            </div>
+                    </div>
+                    <div class="fav">
+                        <img src="Image/poster2.jpg">
+                        <div class="layer">
+                       </div>
+                    </div>
+                    <div class="fav">
+                        <img src="Image/poster3.jpg">
+                        <div class="layer">                       
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!---------- share --------->
+    <section class="contact">
+        <div class="share">
+           <p>My Contact:</p>
+           <div class="social">
+               <a href="#"><i class='bx bxl-facebook'></i></a>
+               <a href="#"><i class='bx bxl-twitter' ></i></a>
+               <a href="#"><i class='bx bxl-instagram' ></i></a>
+           </div>
+        </div>
+       </section>
+
+    <script>
+        var sidemeno = document.getElementById("navbar");
+        function openmenu(){
+            sidemeno.style.right = "0";
+        }
+        function closemenu(){
+            sidemeno.style.right = "-500px";
+        }
+    </script>
+
+</body>
+</html>
